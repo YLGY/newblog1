@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Blog 1')</title>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    @yield('content')
+    <header class="header-container" id="app">
+        <header-component help="{{ route('help') }}"
+            home="{{ route('home') }}"></header-component>
+    </header>
+
+    <div class="container">
+        @yield('content')
+
+    </div>
+    @include('layouts._footer')
+    
+    <script src="js/app.js"></script>
 </body>
 </html>

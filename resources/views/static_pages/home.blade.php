@@ -3,5 +3,13 @@
 @section('title', 'Home')
 
 @section('content')
-    <h1>Home Page</h1>
+    <div class="content">
+        <h1 class="content__title">
+            Hello Laravel
+        </h1>
+        <p class="content__text">
+            This is the Home page {{ date('Y') }}
+        </p>
+        <a href="{{ route('signup') }}" class="btn btn-lg btn-success">Register</a>
+    </div>
 @endsection

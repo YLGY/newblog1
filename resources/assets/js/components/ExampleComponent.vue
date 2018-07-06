@@ -5,7 +5,7 @@
                 <div class="card card-default">
                     <div class="card-header">Example Component</div>
 
-                    <div class="card-body">
+                    <div class="card-body test">
                         I'm an example component.
                     </div>
                 </div>
@@ -21,3 +21,11 @@
         }
     }
 </script>
+
+<style>
+    .test {
+        color: red;
+        font-size: 2rem;
+    }
+</style>
+
