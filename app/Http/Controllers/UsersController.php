@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
+use Mail;
 
 class UsersController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth', [
-            'except' => ['show', 'create', 'store', 'index']
+            'except' => ['show', 'create', 'store', 'index', 'confirmEmail']
         ]);
     }
 
@@ -45,10 +46,11 @@ class UsersController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
-        Auth::login($user);
+        // Auth::login($user);
+        $this->sendEmailConfirmationTo($user);
 
-        session()->flash('success', 'Welcome,' . $user->name);
-        return redirect()->route('users.show', [$user]);
+        session()->flash('success', 'Activation email has been sent to your Email.');
+        return redirect('/');
     }
 
     public function edit(User $user)
@@ -85,5 +87,32 @@ class UsersController extends Controller
         $user->delete();
         session()->flash('success', 'Delete account successfully');
         return back();
+    }
+
+    public function confirmEmail($token)
+    {
+        $user = User::where('activation_token', $token)->firstOrFail();
+
+        $user->activated = true;
+        $user->activation_token = null;
+        $user->save();
+
+        Auth::login($user);
+        session()->flash('success', 'Congratulations, activate successfully');
+        return redirect()->route('users.show', [$user]);
+    }
+
+    protected function sendEmailConfirmationTo($user)
+    {
+        $view = 'emails.confirm';
+        $data = compact('user');
+        $from = 'test@test.com';
+        $name = 'RLG';
+        $to = $user->email;
+        $subject = 'Thank your for registering at Blog 1! Please confirm your email';
+
+        Mail::send($view, $data, function($message) use ($from, $name, $to, $subject) {
+            $message->from($from, $name)->to($to)->subject($subject);
+        });
     }
 }
