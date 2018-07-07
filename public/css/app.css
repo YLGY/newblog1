@@ -10555,3 +10555,38 @@ a.text-dark:focus {
   border: 0;
 }
 
+.gravatar {
+  text-align: center;
+  padding: 1rem 0 .2rem;
+}
+
+.gravatar__img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.users {
+  list-style: none;
+}
+
+.users__item {
+  padding: .5rem 0;
+}
+
+.users__item:not(:last-child) {
+  border-bottom: 1px solid grey;
+}
+
+.users__img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+.delete-btn {
+  float: right;
+  position: relative;
+  right: 0;
+  bottom: 2.5rem;
+}
+

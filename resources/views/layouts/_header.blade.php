@@ -5,7 +5,7 @@
             <ul class="header__list">
                 @if (Auth::check())
                     <li class="header__item">
-                        <a href="#">Users List</a>
+                        <a href="{{ route('users.index') }}">Users List</a>
                     </li>
                     <li class="dropdown header__item">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="UserDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -13,7 +13,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="UserDropdownMenu">
                             <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id) }}">User Details</a>
-                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="{{ route('users.edit', Auth::user()->id) }}">Edit</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item">
                                 <form action="{{ route('logout') }}" method="POST">
