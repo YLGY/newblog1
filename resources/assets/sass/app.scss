@@ -93,3 +93,46 @@
     margin: .5rem;
   }
 }
+
+.header {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw;
+
+  &__logo {
+      color: white;
+      font-weight: 800;
+      font-size: 1.5rem;
+  }
+
+  &__nav {
+      width: 10rem;
+      display: flex;
+      align-items: center;
+  }
+
+  &__list {
+      margin: 0;
+      flex: 1;
+      
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+
+      list-style: none;
+
+      a {
+          color: white;
+      }
+  }
+
+  &__item {
+    align-self: center;
+  }
+}
+
+.dropdown-menu, .dropdown-toggle {
+  background: black;
+  border: 0;
+}

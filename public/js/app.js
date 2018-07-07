@@ -47881,7 +47881,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['help', 'home']
+    props: ['help', 'home', 'login']
 });
 
 /***/ }),
@@ -47903,21 +47903,14 @@ var render = function() {
           _c("a", { attrs: { href: _vm.help } }, [_vm._v("Help")])
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("li", { staticClass: "header__item" }, [
+          _c("a", { attrs: { href: _vm.login } }, [_vm._v("Login")])
+        ])
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "header__item" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Login")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

@@ -7,7 +7,7 @@
                     <a :href="help">Help</a>
                 </li>
                 <li class="header__item">
-                    <a href="#">Login</a>
+                    <a :href="login">Login</a>
                 </li>
             </ul>
         </nav>
@@ -18,7 +18,8 @@
     export default {
         props: [
             'help',
-            'home'
+            'home',
+            'login'
         ]
     }
 </script>

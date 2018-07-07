@@ -10498,3 +10498,60 @@ a.text-dark:focus {
   margin: .5rem;
 }
 
+.header {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10vw;
+}
+
+.header__logo {
+  color: white;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.header__nav {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__list {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  list-style: none;
+}
+
+.header__list a {
+  color: white;
+}
+
+.header__item {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.dropdown-menu,
+.dropdown-toggle {
+  background: black;
+  border: 0;
+}
+

@@ -10,10 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <header class="header-container">
-            <header-component help="{{ route('help') }}"
-                home="{{ route('home') }}"></header-component>
-        </header>
+        @include('layouts._header')
     
         <div class="container">
             @include('shared._messages')
