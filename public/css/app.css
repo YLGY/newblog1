@@ -10420,6 +10420,7 @@ a.text-dark:focus {
 
 .container {
   margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 .content {
@@ -10444,5 +10445,56 @@ a.text-dark:focus {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
+}
+
+.form {
+  width: 30rem;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 2px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.form__heading {
+  padding: .5rem;
+  background: #c7c5c5;
+  border-bottom: 1px solid grey;
+  margin: 0;
+}
+
+.form__body {
+  padding: .5rem;
+}
+
+.form__group {
+  padding-bottom: .5rem;
+}
+
+.form__group label {
+  display: block;
+  margin: 0;
+}
+
+.form__control {
+  width: 100%;
+}
+
+.form__submit {
+  background: #2222eb;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0;
+  padding: .5rem;
+}
+
+.form__submit:hover {
+  color: white;
+  background: darkblue;
+}
+
+.form__errors {
+  margin: .5rem;
 }
 
