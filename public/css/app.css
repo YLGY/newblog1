@@ -10590,3 +10590,84 @@ a.text-dark:focus {
   bottom: 2.5rem;
 }
 
+.status {
+  list-style: none;
+  padding: .5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.status:not(:last-child) {
+  border-bottom: 1px solid grey;
+}
+
+.status__img-container {
+  margin-right: .5rem;
+}
+
+.status__img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.status__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.status__user {
+  font-weight: 800;
+}
+
+.status__time {
+  font-size: .7rem;
+  color: grey;
+}
+
+.status__delete {
+  margin-left: auto;
+}
+
+.statuses-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.status-home {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 10rem;
+          flex: 1 0 10rem;
+  position: relative;
+}
+
+.status-home__btn {
+  margin-top: .5rem;
+  position: absolute;
+  right: 0;
+}
+
+.side {
+  width: 20%;
+  margin-left: 3rem;
+  text-align: center;
+}
+
+.user__img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.status-list {
+  margin-top: 4rem;
+}
+

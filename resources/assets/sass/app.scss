@@ -172,3 +172,75 @@
   right: 0;
   bottom: 2.5rem;
 }
+
+.status {
+  list-style: none;
+  padding: .5rem 0;
+  display: flex;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid grey;
+  }
+
+  &__img-container {
+    margin-right: .5rem;
+  }
+
+  &__img {
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user {
+    font-weight: 800;
+  }
+
+  &__time {
+    font-size: .7rem;
+    color: grey;
+  }
+
+
+  &__delete {
+    margin-left: auto;
+  }
+}
+
+.statuses-container {
+  flex: 1;
+  display: flex;
+}
+
+.status-home {
+  flex: 1 0 10rem;
+  position: relative;
+
+  &__btn {
+    margin-top: .5rem;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.side {
+  width: 20%;
+  margin-left: 3rem;
+  text-align: center;
+}
+
+.user {
+
+  &__img {
+    width: 5rem;
+    border-radius: 50%;
+  }
+}
+
+.status-list {
+  margin-top: 4rem;
+}
